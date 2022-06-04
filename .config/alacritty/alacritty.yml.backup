@@ -1,0 +1,56 @@
+
+colors:
+  # Default colors
+  primary:
+    #background: '#040406'
+    background: '#040000'
+    foreground: '#f8f8f2'
+
+  # Normal colors
+  normal:
+    black: '#000000'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#caa9fa'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#bfbfbf'
+
+  # Bright colors
+  bright:
+    black: '#575b70'
+    red: '#ff6e67'
+    green: '#5af78e'
+    yellow: '#f4f99d'
+    blue: '#caa9fa'
+    magenta: '#ff92d0'
+    cyan: '#9aedfe'
+    white: '#e6e6e6'
+
+font:
+  bold:
+    family: DroidSansMono Nerd Font Mono
+  italic:
+    family: DroidSansMono Nerd Font Mono
+  normal:
+    family: DroidSansMono Nerd Font Mono
+    style: Regular
+  size: 9
+
+window:
+  padding:
+    x: 30 
+    y: 18 
+  border: 3 
+cursor:
+  style:
+    shape: Beam
+
+key_bindings:
+  - { key: V, mods: Control, action: Paste              }
+  - { key: C, mods: Control, action: Copy               }
+  - { key: Up, mods: Shift, action: ScrollPageUp        }
+  - { key: Down, mods: Shift, action: ScrollPageDown    }
+  - { key: Up, mods: Control, action: ScrollToTop       }
+  - { key: Down,  mods: Control, action: ScrollToBottom }
