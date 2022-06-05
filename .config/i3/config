@@ -245,6 +245,7 @@ bindsym $mod+Shift+x exec --no-startup-id light-locker-command -l
 ###################################################################
 ### 
 ###  d         →　rofi run
+###  d + shift →　ARandR
 ###  z         →  rofi clipbord
 ###  z + shift →  rofi snippet
 ###  b + shift →　rofi bluetooth
@@ -258,6 +259,7 @@ bindsym $mod+Shift+x exec --no-startup-id light-locker-command -l
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show run 
+bindsym $mod+shift+d exec --no-startup-id arandr 
 bindsym $mod+shift+w exec --no-startup-id rofi -show window
 bindsym $mod+shift+s exec --no-startup-id rofi -show ssh
 
@@ -292,7 +294,8 @@ exec --no-startup-id /usr/bin/mate-volume-control-status-icon
 exec --no-startup-id feh --bg-fill '/home/kd/Pictures/archlinux.png'
 
 # application setting(float)
-for_window [class="Lxappearance"] floating enable, resize set 600 400
-for_window [class="Pavucontrol"] floating enable, resize set 600 400, move absolute position 300 px 300 px
-for_window [class="Fcitx-config-gtk3"] floating enable, resize set 600 400, move absolute position 990 px 470 px
-for_window [class="mozc_tool"] floating enable, resize set 600 400, move absolute position 990 px 470 px
+for_window [class="Arandr"] floating enable, resize set 600 400, move absolute position 100 px 100 px
+for_window [class="Lxappearance"] floating enable, resize set 600 400, move absolute position 100 px 100 px
+for_window [class="Pavucontrol"] floating enable, resize set 600 400, move absolute position 400 px 400 px
+for_window [class="Fcitx-config-gtk3"] floating enable, resize set 600 400, move absolute position 100 px 100 px
+for_window [class="mozc_tool"] floating enable, resize set 600 400, move absolute position 100px 100 px
