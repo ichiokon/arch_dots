@@ -77,7 +77,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -283,7 +283,7 @@ bindsym $mod+Shift+m exec source '/home/kd/dots/.config/rofi/mount/mountusb'
 #fcitx start
 exec --no-startup-id fcitx-autostart
 # ranger 
-exec --no-startup-id alacritty -e neofetch 
+exec --no-startup-id urxvt -e ranger
 # drop box
 #exec --no-startup-id dropbox start
 #volume controller pavucontrol 
@@ -291,7 +291,7 @@ exec --no-startup-id /usr/bin/mate-volume-control-status-icon
 #bluetooth controller
 #exec --no-startup-id blueman-applet 
 #壁紙
-exec --no-startup-id feh --bg-fill '/home/kd/Pictures/archlinux.png'
+exec --no-startup-id feh --bg-fill '/home/kd/Pictures/index.jpg'
 
 # application setting(float)
 for_window [class="Arandr"] floating enable, resize set 600 400, move absolute position 100 px 100 px
@@ -299,3 +299,5 @@ for_window [class="Lxappearance"] floating enable, resize set 600 400, move abso
 for_window [class="Pavucontrol"] floating enable, resize set 600 400, move absolute position 400 px 400 px
 for_window [class="Fcitx-config-gtk3"] floating enable, resize set 600 400, move absolute position 100 px 100 px
 for_window [class="mozc_tool"] floating enable, resize set 600 400, move absolute position 100px 100 px
+# キーリピート
+exec --no-startup-id "xset r rate 200 30

@@ -1,4 +1,4 @@
-export GLFW_IM_MODULE=ibus
+#export GLFW_IM_MODULE=ibus
 
 # ///// my alias //////
 alias vim='nvim'
@@ -6,6 +6,7 @@ alias fopen='xdg-open'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias rm='trash-put'
+alias dcopy='pwd | pbcopy'
 # /////////////////////
 
 # ///// Histroy //////
@@ -16,13 +17,6 @@ SAVEHIST=999999
 
 export TERM=xterm-256color
 
-
-
-
-
-
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -142,8 +136,8 @@ ranger() { [ -n "$RANGER_LEVEL" ] && exit || LESS="$LESS -+F -+X" command ranger
 [ -n "$RANGER_LEVEL" ] && PS1="(RANGER) $PS1"
 
 # ///////////////////////
-
-
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 
 # ///// git /////
@@ -157,4 +151,6 @@ fbr() {
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
+# /////neofetch/////////////
+pfetch 
 
