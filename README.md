@@ -11,8 +11,8 @@
 - STATUS-BAR:polybar
 - MENU:rofi
 ## etc
-- editer:neovim
+- neovim
 - cava
-- cliapp:(pipes.sh,neofetch,cbonsai ...)
-- themes:tokyo-night
-- snipet-tool:texpander(snippet)
+- clitools:(pipes.sh,neofetch,cbonsai ...)
+- gtk4-theme:tokyo-night
+- texpander(snippet)
