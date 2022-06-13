@@ -3,14 +3,16 @@
 ![](https://i.imgur.com/ecEktSW.jpg)
 
 ## my system:
-- arch
-- zsh
-- i3
-- picom
-- rofi
+- os:arch
+- shell:zsh
+- WM:i3
+- compositer:picom
+- terminal:alacrtty/urxvt/
+- statusbar:polybar
+- menu:rofi
+## etc
+- editer:neovim
 - cava
-- pipes.sh
-- pfetch
-- terminal(Alacritty)
-- themes tokyo-night
-- texpander(snippet)
+- cliapp:(pipes.sh,neofetch,cbonsai ...)
+- themes:tokyo-night
+- snipet-tool:texpander(snippet)
