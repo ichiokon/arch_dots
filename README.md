@@ -1,4 +1,4 @@
-# [i3 gaps] My First rice 
+# [i3 gaps] Arch Linux My First rice 
 ![](https://i.imgur.com/cBusLnO.jpg)
 ![](https://i.imgur.com/ecEktSW.jpg)
 
