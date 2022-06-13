@@ -1,0 +1,5 @@
+pane	0	0	1	:*	0	kd@r134:~/.config/alacritty	:/home/kd/dots/.config/alacritty	1	zsh	:
+pane	1	0	1	:*	0	kd@r134:~/work/git_repo/unixporn/Dotfiles	:/home/kd/work/git_repo/unixporn/Dotfiles	1	zsh	:
+window	0	0	:zsh	1	:*	c35d,86x18,0,0,0	:
+window	1	0	:zsh	1	:*	ad5e,86x41,0,0,1	:
+state	1	

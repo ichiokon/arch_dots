@@ -1,0 +1,3 @@
+pane	0	0	1	:*	0	kd@r134:~	:/home/kd	1	zsh	:
+window	0	0	:zsh	1	:*	a7dd,83x40,0,0,0	:
+state	0	

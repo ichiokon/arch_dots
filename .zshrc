@@ -153,4 +153,5 @@ fbr() {
 
 # /////neofetch/////////////
 pfetch 
-
+#neofetch --w3m ~/Pictures/god3.jpeg
+#source /home/kd/work/temp/.test.sh

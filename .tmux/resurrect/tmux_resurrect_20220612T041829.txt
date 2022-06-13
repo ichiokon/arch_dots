@@ -1,0 +1,5 @@
+pane	0	0	1	:*	0	neofetch	:/home/kd	1	bash	:bash /usr/bin/neofetch
+pane	1	0	1	:*	0	r134	:/home/kd	1	zsh	:
+window	0	0	:bash	1	:*	ad5d,86x41,0,0,0	:
+window	1	0	:zsh	1	:*	bfde,83x27,0,0,1	:
+state	1	

@@ -3,49 +3,41 @@
 #foreground: '#f8f8f2'
 #foreground: '#7DCFFF'
 
-
+# TokyoNight Alacritty Colors
+# https://github.com/folke/tokyonight.nvim/blob/main/extras/alacritty_tokyonight_night.yml
 colors:
+  name: TokyoNight Night
+  author: Folke
+  # Default colors
+  primary:
+    background: '0x1a1b26'
+    foreground: '0xc0caf5'
 
-    selection:
-      text: '#1E1E2E' # base
-      background: '#F5E0DC' # rosewater
+  # Normal colors
+  normal:
+    black:   '0x15161E'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xa9b1d6'
 
-    # Normal colors
-    normal:
-      black:   '#45475A' # surface1
-      red:     '#F38BA8' # red
-      green:   '#A6E3A1' # green
-      yellow:  '#F9E2AF' # yellow
-      blue:    '#89B4FA' # blue
-      magenta: '#F5C2E7' # pink
-      cyan:    '#94E2D5' # teal
-      white:   '#BAC2DE' # subtext1
+  # Bright colors
+  bright:
+    black:   '0x414868'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xc0caf5'
 
-    # Bright colors
-    bright:
-      black:   '#585B70' # surface2
-      red:     '#F38BA8' # red
-      green:   '#A6E3A1' # green
-      yellow:  '#F9E2AF' # yellow
-      blue:    '#89B4FA' # blue
-      magenta: '#F5C2E7' # pink
-      cyan:    '#94E2D5' # teal
-      white:   '#A6ADC8' # subtext0
-
-    # Dim colors
-    dim:
-      black:   '#45475A' # surface1
-      red:     '#F38BA8' # red
-      green:   '#A6E3A1' # green
-      yellow:  '#F9E2AF' # yellow
-      blue:    '#89B4FA' # blue
-      magenta: '#F5C2E7' # pink
-      cyan:    '#94E2D5' # teal
-      white:   '#BAC2DE' # subtext1
-
-    indexed_colors:
-      - { index: 16, color: '#FAB387' }
-      - { index: 17, color: '#F5E0DC' }
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
 # Import additional configuration files
 #
 # Imports are loaded in order, skipping all missing files, with the importing
@@ -92,8 +84,8 @@ window:
    # Blank space added around the window in pixels. This padding is scaled
    # by DPI and the specified value is always added at both opposing sides.
    padding:
-      x: 22
-      y: 21
+      x: 35 
+      y: 35 
 
    # Spread additional padding evenly around the terminal content.
    #dynamic_padding: false
@@ -148,7 +140,7 @@ window:
 #scrolling:
 # Maximum number of lines in the scrollback buffer.
 # Specifying '0' will disable scrolling.
-history: 100000
+history: 999999
 
 # Scrolling distance multiplier.
 #multiplier: 3
@@ -165,7 +157,8 @@ font:
       #   - (Windows) Consolas
       #family: "RobotoMono Nerd Font" 
       #family: "FiraCode Nerd Font Mono"
-      family: "CodeNewRoman Nerd Font Mono"
+      #family: "CodeNewRoman Nerd Font Mono"
+      family: "CaskaydiaCove Nerd Font"
       #family: "OperatorMono Nerd Font"
 
       # The `style` can be specified to pick a specific face.
@@ -205,7 +198,7 @@ font:
    #style: Bold Italic
 
    # Point size
-   size: 13 
+   size: 13
 
    # Offset is the extra space around each character. `offset.y` can be thought
    # of as modifying the line spacing, and `offset.x` as modifying the letter

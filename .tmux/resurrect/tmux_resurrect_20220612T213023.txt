@@ -1,0 +1,3 @@
+pane	0	0	1	:*	0	spt	:/home/kd	1	spt	:spt
+window	0	0	:spt	1	:*	b8dd,81x35,0,0,0	:
+state	0	

@@ -1,0 +1,4 @@
+pane	0	0	1	:*	0	spt	:/home/kd	0	spt	:spt
+pane	0	0	1	:*	1	cava	:/home/kd	1	cava	:cava
+window	0	0	:cava	1	:*	a4ec,81x35,0,0[81x25,0,0,0,81x9,0,26,1]	:
+state	0	
