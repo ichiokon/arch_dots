@@ -12,18 +12,18 @@ shadow = true;
 
 # The blur radius for shadows, in pixels. (defaults to 12)
 # shadow-radius = 12
-shadow-radius = 15;
+shadow-radius = 20;
 
 # The opacity of shadows. (0.0 - 1.0, defaults to 0.75)
-shadow-opacity = 1
+shadow-opacity = 0.9; 
 
 # The left offset for shadows, in pixels. (defaults to -15)
 # shadow-offset-x = -15
-shadow-offset-x = 12;
+shadow-offset-x = 13;
 
 # The top offset for shadows, in pixels. (defaults to -15)
 # shadow-offset-y = -15
-shadow-offset-y = 12;
+shadow-offset-y = 7;
 
 # Avoid drawing shadows on dock/panel windows. This option is deprecated,
 # you should use the *wintypes* option in your config file instead.
@@ -85,8 +85,8 @@ shadow-exclude = [
 
 # Fade windows in/out when opening/closing and when opacity changes,
 #  unless no-fading-openclose is used.
-fading = false
-#fading = true
+#fading = false
+fading = true
 
 # Opacity change between steps while fading in. (0.01 - 1.0, defaults to 0.028)
 # fade-in-step = 0.028
@@ -121,10 +121,10 @@ opacity-rule = [
 ];
 
 
-inactive-opacity = 0.8;
-frame-opacity = 1.0;
+inactive-opacity = 0.75;
+frame-opacity = 1;
 inactive-opacity-override = true;
-active-opacity = 0.9; 
+active-opacity = 0.85; 
 
 
 #################################

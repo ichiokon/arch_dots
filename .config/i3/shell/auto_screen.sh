@@ -9,9 +9,10 @@ do
     if [ $st_prev != $st_next ]; then
         st_prev=$st_next
         if [ $st_next = "connected" ]; then
-            #xrandr --output eDP1 --mode 1600x900 --output HDMI1 --auto --above eDP1
-	    /home/kd/.screenlayout/hiratuka.sh
-        else
+        
+	     xrandr --output eDP1 --off  --output HDMI1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+
+	else
             xrandr --output eDP1 --mode 1920x1080 --output HDMI1 --off
 	    #/home/kd/.screenlayout/screen1.sh
         fi

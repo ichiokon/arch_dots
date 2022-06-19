@@ -8,7 +8,7 @@
 
 set $mod Mod4
 
-gaps inner 35
+gaps inner 45
 gaps outer  5
 gaps bottom 5
 
@@ -34,9 +34,9 @@ gaps bottom 5
 
 # タイトルバーを消す
 for_window [class="^.*"] border pixel 0 
-#smart_borders on
-#smart_borders no_gaps 
-#border_radius 15
+smart_borders on
+smart_borders on 
+#border_radius 0 
 
 # Screen brightness controls
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 10
@@ -252,7 +252,7 @@ bar {
 }
 
 hide_edge_borders none 
-client.focused  #ffffff #ffffff #ffffff #ffffff #ffffff
+client.focused  #000000 #000000 #000000 #000000 #000000
 
 
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -280,6 +280,7 @@ bindsym $mod+Shift+x exec --no-startup-id light-locker-command -l
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show run 
 bindsym $mod+shift+d exec --no-startup-id arandr 
+bindsym $mod+shift+v exec --no-startup-id pavucontrol 
 #bindsym $mod+shift+w exec --no-startup-id rofi -show window
 bindsym $mod+shift+w exec --no-startup-id rofi -show window
 bindsym $mod+shift+s exec --no-startup-id rofi -show ssh
@@ -314,23 +315,38 @@ exec --no-startup-id /usr/bin/mate-volume-control-status-icon
 #exec --no-startup-id blueman-applet 
 
 #workspace set app
-assign [class="Ferdi"] workspace 2
+assign [class="rambox"] workspace 2
+assign [class="Spotify"] workspace 1
 assign [class="org.remmina.Remmina"] workspace 5 
+#assign [class="libreoffice-calc"] workspace 6 
+#assign [class="Libreoffice-startcenter"] workspace 6 
 
 
 # application setting(float)
-for_window [class="URxvt"]  floating enable, resize set 900 550, move absolute position 100 px 100 px
+for_window [class="URxvt"]  floating enable, resize set 900 420, move absolute position 100 px 100 px
+for_window [class="kitty"]  floating enable, resize set 900 380, move absolute position 100 px 550 px
 for_window [class="Arandr"] floating enable, resize set 600 400, move absolute position 100 px 100 px
 for_window [class="Lxappearance"] floating enable, resize set 600 400, move absolute position 100 px 100 px
-for_window [class="Pavucontrol"] floating enable, resize set 600 400, move absolute position 400 px 400 px
+for_window [class="Pavucontrol"] floating enable, resize set 1200 900, move absolute position 100 px 100 px
 for_window [class="Fcitx-config-gtk3"] floating enable, resize set 600 400, move absolute position 100 px 100 px
 for_window [class="mozc_tool"] floating enable, resize set 600 400, move absolute position 100px 100 px
+for_window [class="libreoffice-calc"] floating enable,move absolute position center
+for_window [class="Libreoffice-startcenter"] floating enable ,move absolute position center
+for_window [class="inkdrop"] floating enable ,move absolute position center
+
+
 # keyrepyte 
 exec --no-startup-id "xset r rate 200 30"
+
 # Wallpaper
-exec --no-startup-id feh --bg-scale '/home/kd/Pictures/kd001.jpg'
-exec --no-startup-id urxvt -e neofetch
-exec --no-startup-id ferdi
+#exec --no-startup-id feh --bg-scale '/home/kd/Pictures/kd001.jpg'
+exec --no-startup-id feh --bg-scale '/home/kd/Dropbox/darkblue.png
+exec --no-startup-id ~/.config/i3/shell/neo.sh 
+#exec --no-startup-id urxvt -e neofetch 
+exec --no-startup-id rambox 
+exec --no-startup-id kitty -e cava
+exec --no-startup-id spotify
+
 
 #Shutdown
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -344,4 +360,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #}
 
 for_window [ workspace="1" ] floating enable
-exec --no-startup-id ~/.config/i3/shell/auto_screen.sh
+bindsym $mod+Shift+a exec xrandr --output eDP1 --mode 1920x1080 --output HDMI1 --off
+bindsym $mod+Shift+BackSpace move scratchpad
+bindsym $mod+backslash scratchpad show

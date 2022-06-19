@@ -1,12 +1,19 @@
-#export GLFW_IM_MODULE=ibus
+export GLFW_IM_MODULE=ibus
 
+export TERM=xterm-256color
 # ///// my alias //////
 alias vim='nvim'
+alias gi='lazygit'
 alias fopen='xdg-open'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias rm='trash-put'
 alias dcopy='pwd | pbcopy'
+alias lgit='lazygit'
+alias trj='trans {ja=en}'
+alias tre='trans {en=ja}'
+
+
 # /////////////////////
 
 # ///// Histroy //////
@@ -15,7 +22,26 @@ HISTSIZE=999999
 SAVEHIST=999999
 # ////////////////////
 
-export TERM=xterm-256color
+
+# ////// fzf ////////////////
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+export FZF_DEFAULT_OPTS='--height 70% --reverse --border'
+
+fbr() {
+  local branches branch
+  branches=$(git --no-pager branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
+
+alias catfzf="fzf --preview 'head -100 {}' | xargs cat T |pbcopy"
+# ///////////////////////////
+
+
+
+
+
 
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -25,7 +51,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/work/bin:/usr/local/bin:$PATH
-
+export PATH=$HOME/work/app/rofi-translate:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -155,3 +181,8 @@ fbr() {
 pfetch 
 #neofetch --w3m ~/Pictures/god3.jpeg
 #source /home/kd/work/temp/.test.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH=$PATH:/home/kd/.spicetify
+export NOW=`date "+%Y%m%d"`
+/home/kd/dots/.config/img/rotation.sh 1>/dev/null
