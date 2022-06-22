@@ -8,9 +8,10 @@
 
 set $mod Mod4
 
-gaps inner 45
-gaps outer  5
-gaps bottom 5
+gaps inner 34
+gaps top 55 
+gaps outer 34 
+gaps bottom 10
 
 ################
 #gaps top -15 
@@ -233,29 +234,29 @@ bindsym $mod+r mode "resize"
 #	font pango: Monolisa,FontAwesome 14
 #}
 
-bar {
-    status_command    i3status
-    position          top
-    height            40 
-    workspace_buttons yes
-    font pango: Monolisa,FontAwesome 12
+#bar {
+#    status_command    i3status
+#    position          top
+#    height            40 
+#    workspace_buttons yes
+#    font pango: Monolisa,FontAwesome 12
 
-    colors {
-        background #1a1b26
-        statusline #ffffff
+#    colors {
+#        background #1a1b26
+#        statusline #ffffff
 
-        focused_workspace  #ffffff #285577
-        active_workspace   #ffffff #333333
-        inactive_workspace #888888 #222222
-        urgent_workspace   #ffffff #900000
-    }
-}
+#        focused_workspace  #ffffff #285577
+#        active_workspace   #ffffff #333333
+#        inactive_workspace #888888 #222222
+#        urgent_workspace   #ffffff #900000
+#    }
+#}
 
 hide_edge_borders none 
 client.focused  #000000 #000000 #000000 #000000 #000000
 
 
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #Picom
 exec_always --no-startup-id picom -b --config ~/.config/picom/config  
 # lock screen
@@ -323,8 +324,9 @@ assign [class="org.remmina.Remmina"] workspace 5
 
 
 # application setting(float)
-for_window [class="URxvt"]  floating enable, resize set 900 420, move absolute position 100 px 100 px
-for_window [class="kitty"]  floating enable, resize set 900 380, move absolute position 100 px 550 px
+for_window [class="Spotify"]  floating enable, resize set 800 840, move absolute position 1030 px 67 px
+for_window [class="URxvt"]  floating enable, resize set 900 420, move absolute position 80 px 70 px
+for_window [class="kitty"]  floating enable, resize set 900 380, move absolute position 80 px 530 px
 for_window [class="Arandr"] floating enable, resize set 600 400, move absolute position 100 px 100 px
 for_window [class="Lxappearance"] floating enable, resize set 600 400, move absolute position 100 px 100 px
 for_window [class="Pavucontrol"] floating enable, resize set 1200 900, move absolute position 100 px 100 px
@@ -340,13 +342,14 @@ exec --no-startup-id "xset r rate 200 30"
 
 # Wallpaper
 #exec --no-startup-id feh --bg-scale '/home/kd/Pictures/kd001.jpg'
-exec --no-startup-id feh --bg-scale '/home/kd/Dropbox/darkblue.png
+#exec --no-startup-id feh --bg-scale '/home/kd/Dropbox/darkblue.png
+exec --no-startup-id feh --bg-scale '/home/kd/Pictures/archin.jpeg'
 exec --no-startup-id ~/.config/i3/shell/neo.sh 
 #exec --no-startup-id urxvt -e neofetch 
 exec --no-startup-id rambox 
 exec --no-startup-id kitty -e cava
 exec --no-startup-id spotify
-
+#exec --no-startup-id firefox workspace 2
 
 #Shutdown
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"

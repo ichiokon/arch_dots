@@ -62,6 +62,7 @@ shadow-offset-y = 7;
 #
 # shadow-exclude = []
 shadow-exclude = [
+  "class_g = 'Polybar'",
   "name = 'Notification'",
   "class_g = 'i3bar'",
   "_GTK_FRAME_EXTENTS@:c",
@@ -117,7 +118,7 @@ fade-out-step = 0.5;
 opacity-rule = [
   "100:class_g = 'urxvt'",
   "100:class_g = 'alacrtty'",
-  "100: class_g = 'firefox'"
+  "100:class_g = 'firefox'"
 ];
 
 
