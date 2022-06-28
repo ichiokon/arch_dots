@@ -160,12 +160,12 @@ font:
       #   - (Linux/BSD) monospace
       #   - (Windows) Consolas
       #family: "RobotoMono Nerd Font" 
-      #family: "FiraCode Nerd Font Mono"
+      family: "FiraCode Nerd Font Mono"
       #family: "SourceCodePro Nerd Font"
       #family: "CodeNewRoman Nerd Font Mono"
       #family: "CaskaydiaCove Nerd Font"
       #family: "Monolisa"
-      family: "Jetbrains Mono Nerd Font"
+      #family: "Jetbrains Mono Nerd Font"
 
       # The `style` can be specified to pick a specific face.
       style: "Reguler" 
@@ -204,7 +204,7 @@ font:
    #style: Bold Italic
 
    # Point size
-   size: 13
+   size: 14
 
    # Offset is the extra space around each character. `offset.y` can be thought
    # of as modifying the line spacing, and `offset.x` as modifying the letter

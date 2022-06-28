@@ -12,7 +12,7 @@ alias dcopy='pwd | pbcopy'
 alias lgit='lazygit'
 alias trj='trans {ja=en}'
 alias tre='trans {en=ja}'
-
+alias pwgen_all='pwgen -ncy 15 1'
 
 # /////////////////////
 
@@ -178,7 +178,8 @@ fbr() {
 }
 
 # /////neofetch/////////////
-pfetch 
+clear
+pfetch|lolcat
 #neofetch --w3m ~/Pictures/god3.jpeg
 #source /home/kd/work/temp/.test.sh
 
