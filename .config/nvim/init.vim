@@ -1,6 +1,10 @@
-"clipbord
-"
 set clipboard&
+set noswapfile
+set expandtab
+set ignorecase
+set termguicolors
+set ttyfast
+set noerrorbells visualbell t_vb=
 set clipboard^=unnamedplus
 set encoding=UTF-8
 set nocompatible
@@ -12,18 +16,28 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
 	Plug 'kyazdani42/nvim-tree.lua'
-	Plug 'lambdalisue/fern.vim'
 	Plug 'francoiscabrol/ranger.vim'
 	Plug 'rbgrouleff/bclose.vim'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'sheerun/vim-polyglot'
-	"Plug 'vim-airline/vim-airline'
+	Plug 'preservim/nerdtree'
 	Plug 'jreybert/vimagit'
 	Plug 'ryanoasis/vim-devicons'
-
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+  Plug 'ObserverOfTime/coloresque.vim'
+	Plug 'sheerun/vim-polyglot'
+	Plug 'simeji/winresizer'
+	Plug 'junegunn/rainbow_parentheses.vim'
+	"Plug 'gko/vim-coloresque'
 call plug#end()
-
+"nerdtree"
+nnoremap <C-n> :NERDTreeToggle<CR>
+" Start NERDTree when Vim is started without file arguments.
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+let g:coloresque_extra_filetypes = ['config']
 "let g:airline_theme = 'deus'
 "let g:airline_deus_bg = 'dark'
 let g:airline_powerline_fonts = 1
@@ -31,7 +45,10 @@ set laststatus=2
 let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
-
+"gitgutter
+" 記号更新のタイミングを早くする
+set updatetime=250
+let g:gitgutter_highlight_lines = 1
 
 "let g:airline_theme='gruvbox'                                                                                                             
 let g:airline_powerline_fonts = 1                                                                                                         
@@ -63,7 +80,6 @@ let g:tokyodark_enable_italic = 1
 let g:tokyodark_color_gamma = "1.0"
 colorscheme tokyodark
 " Ctrl+nでファイルツリーを表示/非表示する
-nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
 "colorscheme tokyonight
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>

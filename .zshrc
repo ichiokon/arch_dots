@@ -13,7 +13,6 @@ alias lgit='lazygit'
 alias trj='trans {ja=en}'
 alias tre='trans {en=ja}'
 alias pwgen_all='pwgen -ncy 15 1'
-
 # /////////////////////
 
 # ///// Histroy //////
@@ -37,11 +36,6 @@ fbr() {
 
 alias catfzf="fzf --preview 'head -100 {}' | xargs cat T |pbcopy"
 # ///////////////////////////
-
-
-
-
-
 
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -122,7 +116,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git extract autojump web-search python fzf zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
