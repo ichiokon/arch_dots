@@ -1,4 +1,9 @@
 set clipboard&
+set showcmd
+set showmatch
+set relativenumber
+set cursorcolumn
+set cursorline
 set noswapfile
 set expandtab
 set ignorecase
@@ -10,8 +15,8 @@ set encoding=UTF-8
 set nocompatible
 call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'mhinz/vim-startify'
-	Plug 'ghifarit53/tokyonight-vim'
-	Plug 'tiagovla/tokyodark.nvim'
+"	Plug 'ghifarit53/tokyonight-vim'
+"	Plug 'tiagovla/tokyodark.nvim'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
@@ -30,8 +35,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'sheerun/vim-polyglot'
 	Plug 'simeji/winresizer'
 	Plug 'junegunn/rainbow_parentheses.vim'
+	Plug 'dracula/vim', { 'as': 'dracula' }
 	"Plug 'gko/vim-coloresque'
 call plug#end()
+syntax enable
+"let g:dracula_colorterm = 0
+colorscheme dracula
+
 "nerdtree"
 nnoremap <C-n> :NERDTreeToggle<CR>
 " Start NERDTree when Vim is started without file arguments.
@@ -78,7 +88,7 @@ let g:tokyodark_transparent_background = 0
 let g:tokyodark_enable_italic_comment = 1
 let g:tokyodark_enable_italic = 1
 let g:tokyodark_color_gamma = "1.0"
-colorscheme tokyodark
+" colorscheme tokyodark
 " Ctrl+nでファイルツリーを表示/非表示する
 "colorscheme tokyonight
 " Find files using Telescope command-line sugar.

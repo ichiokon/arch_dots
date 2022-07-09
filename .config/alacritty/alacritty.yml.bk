@@ -5,59 +5,39 @@
 
 # TokyoNight Alacritty Colors
 # https://github.com/folke/tokyonight.nvim/blob/main/extras/alacritty_tokyonight_night.yml
-
 colors:
+  name: TokyoNight Night
+  author: Folke
   # Default colors
+  #primary:
+    #background: '0x1a1b26'
+    #background: '0x1A1B26'
+    #foreground: '0xc0caf5'
   primary:
-    background: '0x22212c'
-    foreground: '0xf8f8f2'
-
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #dim_foreground: '0x9a9a9a'
-    #bright_foreground: '0xffffff'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor. If these are unset,
-  # the cursor color will be the inverse of the cell color.
-  cursor:
-    text: '0x454158'
-    cursor: '0xf8f8f2'
-
-  # Selection colors
-  #
-  # Colors which should be used to draw the selection area. If selection
-  # background is unset, selection color will be the inverse of the cell colors.
-  # If only text is unset the cell text color will remain the same.
-  selection:
-    text: '0xf8f8f2'
-    background: '0x454158'
+    background: '0x0f0f17'
+    foreground: '0xbfc9db'
 
   # Normal colors
   normal:
-    black:   '0x22212c'
-    red:     '0xff9580'
-    green:   '0x8aff80'
-    yellow:  '0xffff80'
-    blue:    '0x9580ff'
-    magenta: '0xff80bf'
-    cyan:    '0x80ffea'
-    white:   '0xf8f8f2'
+    black:   '0x15161E'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xa9b1d6'
 
   # Bright colors
   bright:
-    black:   '0x22212c'
-    red:     '0xffaa99'
-    green:   '0xa2ff99'
-    yellow:  '0xffff99'
-    blue:    '0xaa99ff'
-    magenta: '0xff99cc'
-    cyan:    '0x99ffee'
-    white:   '0xffffff'
+    black:   '0x414868'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xc0caf5'
 
   indexed_colors:
     - { index: 16, color: '0xff9e64' }
@@ -180,12 +160,12 @@ font:
       #   - (Linux/BSD) monospace
       #   - (Windows) Consolas
       #family: "RobotoMono Nerd Font" 
-      #family: "FiraCode Nerd Font Mono"
+      family: "FiraCode Nerd Font Mono"
       #family: "SourceCodePro Nerd Font"
       #family: "CodeNewRoman Nerd Font Mono"
       #family: "CaskaydiaCove Nerd Font"
       #family: "Monolisa"
-      family: "Jetbrains Mono Nerd Font"
+      #family: "Jetbrains Mono Nerd Font"
 
       # The `style` can be specified to pick a specific face.
       style: "Reguler" 
@@ -224,7 +204,7 @@ font:
    #style: Bold Italic
 
    # Point size
-   size: 13
+   size: 12
 
    # Offset is the extra space around each character. `offset.y` can be thought
    # of as modifying the line spacing, and `offset.x` as modifying the letter
