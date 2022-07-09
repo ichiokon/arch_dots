@@ -1,3 +1,6 @@
+packadd! dracula_pro
+let g:dracula_colorterm = 0
+colorscheme dracula_pro
 set clipboard&
 set showcmd
 set showmatch
@@ -35,12 +38,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'sheerun/vim-polyglot'
 	Plug 'simeji/winresizer'
 	Plug 'junegunn/rainbow_parentheses.vim'
-	Plug 'dracula/vim', { 'as': 'dracula' }
+"	Plug 'dracula/vim', { 'as': 'dracula' }
 	"Plug 'gko/vim-coloresque'
 call plug#end()
 syntax enable
 "let g:dracula_colorterm = 0
-colorscheme dracula
+"colorscheme dracula
 
 "nerdtree"
 nnoremap <C-n> :NERDTreeToggle<CR>
