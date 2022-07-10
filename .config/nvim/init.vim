@@ -1,7 +1,17 @@
+" ██    ██ ██ ██████████  ██████  █████ 
+" ██   ░██░██░░██░░██░░██░░██░░█ ██░░░██
+" ░██ ░██ ░██ ░██ ░██ ░██ ░██ ░ ░██  ░░ 
+" ░░████  ░██ ░██ ░██ ░██ ░██   ░██   ██
+"  ░░██   ░██ ███ ░██ ░██░███   ░░█████ 
+"   ░░    ░░ ░░░  ░░  ░░ ░░░     ░░░░░  
+"
+
+autocmd BufWritePost ~/.config/nvim/init.vim so ~/.config/nvim/init.vim
 packadd! dracula_pro
 let g:dracula_colorterm = 0
 colorscheme dracula_pro
 set clipboard&
+set mouse=a
 set showcmd
 set showmatch
 set relativenumber
@@ -13,9 +23,11 @@ set ignorecase
 set termguicolors
 set ttyfast
 set noerrorbells visualbell t_vb=
-set clipboard^=unnamedplus
+set clipboard^=unnamed,unnamedplus
 set encoding=UTF-8
+set helplang=ja
 set nocompatible
+set backspace=indent,eol,start
 call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'mhinz/vim-startify'
 "	Plug 'ghifarit53/tokyonight-vim'
@@ -47,6 +59,7 @@ syntax enable
 
 "nerdtree"
 nnoremap <C-n> :NERDTreeToggle<CR>
+
 " Start NERDTree when Vim is started without file arguments.
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
