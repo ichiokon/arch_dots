@@ -318,7 +318,7 @@ exec --no-startup-id /usr/bin/mate-volume-control-status-icon
 #workspace set app
 assign [class="rambox"] workspace 2
 assign [class="Spotify"] workspace 1
-assign [class="org.remmina.Remmina"] workspace 5 
+assign [class="org.remmina.Remmina"] workspace 5
 #assign [class="libreoffice-calc"] workspace 6 
 #assign [class="Libreoffice-startcenter"] workspace 6 
 
@@ -334,7 +334,7 @@ for_window [class="Fcitx-config-gtk3"] floating enable, resize set 600 400, move
 for_window [class="mozc_tool"] floating enable, resize set 600 400, move absolute position 100px 100 px
 for_window [class="libreoffice-calc"] floating enable,move absolute position center
 for_window [class="Libreoffice-startcenter"] floating enable ,move absolute position center
-for_window [class="inkdrop"] floating enable ,move absolute position center
+#for_window [class="inkdrop"] floating enable ,move absolute position center
 
 
 # keyrepyte 
@@ -346,7 +346,7 @@ exec --no-startup-id "xset r rate 200 30"
 exec --no-startup-id feh --bg-scale '/home/kd/Pictures/archin.jpeg'
 exec --no-startup-id ~/.config/i3/shell/neo.sh 
 #exec --no-startup-id urxvt -e neofetch 
-exec --no-startup-id rambox 
+#exec --no-startup-id rambox 
 exec --no-startup-id kitty -e cava
 exec --no-startup-id spotify
 #exec --no-startup-id firefox workspace 2
@@ -366,3 +366,4 @@ for_window [ workspace="1" ] floating enable
 bindsym $mod+Shift+a exec xrandr --output eDP1 --mode 1920x1080 --output HDMI1 --off
 bindsym $mod+BackSpace move scratchpad
 bindsym $mod+backslash scratchpad show
+bindsym $mod+i exec inkdrop

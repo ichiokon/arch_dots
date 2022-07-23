@@ -32,6 +32,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'mhinz/vim-startify'
 "	Plug 'ghifarit53/tokyonight-vim'
 "	Plug 'tiagovla/tokyodark.nvim'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+ 	Plug 'preservim/nerdtree'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'norcalli/nvim-colorizer.lua'
+	Plug 'scrooloose/syntastic'
+	Plug 'mtscout6/syntastic-local-eslint.vim'
+  Plug 'Fymyte/rasi.vim'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
@@ -59,6 +66,8 @@ syntax enable
 
 "nerdtree"
 nnoremap <C-n> :NERDTreeToggle<CR>
+"let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
+let g:NERDTreeGitStatusShowIgnored = 1 " a heavy feature may cost much more time. default: 0
 
 " Start NERDTree when Vim is started without file arguments.
 "autocmd StdinReadPre * let s:std_in=1
@@ -113,3 +122,14 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 set nowrap
+lua require'colorizer'.setup()
+  set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+  set encoding=utf-8
+
+  " フォルダアイコンを表示
+  let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
+  let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+  " after a re-source, fix syntax matching issues (concealing brackets):
+  if exists('g:loaded_webdevicons')
+    call webdevicons#refresh()
+  endif

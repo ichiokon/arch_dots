@@ -1,7 +1,0 @@
-pane	0	0	1	:*	0	ranger	:/home/kd/Pictures	0	python	:/usr/bin/python -O /usr/bin/ranger
-pane	0	0	1	:*	1	htop	:/home/kd	1	htop	:htop
-pane	1	0	1	:*	0	ranger	:/home/kd/Dropbox	1	python	:/usr/bin/python -O /usr/bin/ranger
-pane	1	0	1	:*	1	htop	:/home/kd	0	htop	:htop
-window	0	0	:htop	1	:*	c6a1,97x49,0,0[97x32,0,0,0,97x16,0,33,1]	:
-window	1	0	:python	1	:*	b674,126x63,0,0[126x31,0,0,2,126x31,0,32,3]	:
-state	1	

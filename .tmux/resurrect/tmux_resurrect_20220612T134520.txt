@@ -1,4 +1,0 @@
-pane	0	0	1	:*	0	spt	:/home/kd	0	spt	:spt
-pane	0	0	1	:*	1	cava	:/home/kd	1	cava	:cava
-window	0	0	:cava	1	:*	951a,102x39,0,0[102x29,0,0,0,102x9,0,30,1]	:
-state	0	

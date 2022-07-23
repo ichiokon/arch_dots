@@ -2,6 +2,7 @@ export GLFW_IM_MODULE=ibus
 
 export TERM=xterm-256color
 # ///// my alias //////
+alias winzip='unzip -O CP932'
 alias vim='nvim'
 alias gi='lazygit'
 alias fopen='xdg-open'
@@ -181,3 +182,4 @@ pfetch|lolcat
 export PATH=$PATH:/home/kd/.spicetify
 export NOW=`date "+%Y%m%d"`
 /home/kd/dots/.config/img/rotation.sh 1>/dev/null
+xmodmap ~/.Xmodmap 2>/dev/null
