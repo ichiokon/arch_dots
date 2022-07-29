@@ -183,3 +183,13 @@ export PATH=$PATH:/home/kd/.spicetify
 export NOW=`date "+%Y%m%d"`
 /home/kd/dots/.config/img/rotation.sh 1>/dev/null
 xmodmap ~/.Xmodmap 2>/dev/null
+
+# rgrep "*.txt" "hoge"
+function rgrep() {
+    grep -ainr --include=$1 $2
+}
+
+# ogrep "*.c" "hoge" →　gF
+function ogrep() {
+    grep -ainr --include=$1 $2 | vim -R -
+}
