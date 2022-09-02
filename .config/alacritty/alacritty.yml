@@ -9,7 +9,8 @@
 colors:
   # Default colors
   primary:
-    background: '0x22212c'
+    # background: '0x22212c'
+    background: '0x0f0f17'
     foreground: '0xf8f8f2'
 
     # Bright and dim foreground colors
@@ -108,8 +109,8 @@ window:
    # Blank space added around the window in pixels. This padding is scaled
    # by DPI and the specified value is always added at both opposing sides.
    padding:
-      x: 35 
-      y: 35 
+      x: 25 
+      y: 25 
 
    # Spread additional padding evenly around the terminal content.
    #dynamic_padding: false
@@ -224,7 +225,7 @@ font:
    #style: Bold Italic
 
    # Point size
-   size: 7 
+   size: 9 
 
    # Offset is the extra space around each character. `offset.y` can be thought
    # of as modifying the line spacing, and `offset.x` as modifying the letter
