@@ -30,6 +30,7 @@ set nocompatible
 set backspace=indent,eol,start
 call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'mhinz/vim-startify'
+	Plug 'tpope/vim-surround'
 "	Plug 'ghifarit53/tokyonight-vim'
 "	Plug 'tiagovla/tokyodark.nvim'
 	Plug 'Xuyuanp/nerdtree-git-plugin'

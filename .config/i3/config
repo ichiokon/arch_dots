@@ -255,7 +255,6 @@ bindsym $mod+r mode "resize"
 hide_edge_borders none 
 client.focused  #0f0f17 #0f0f17 #0f0f17 #0f0f17 #0f0f17
 
-
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #Picom
 exec_always --no-startup-id picom -b --config ~/.config/picom/config  
@@ -302,8 +301,7 @@ bindsym $mod+Shift+m exec source '/home/kd/dots/.config/rofi/mount/mountusb'
 
 ##################################################################################
 #exec --no-startup-id xfce4-panel --disable-wm-check
-#exec --no-startup-id xfce4-power-manager
-
+exec --no-startup-id xfce4-power-manager
 #fcitx start
 exec --no-startup-id fcitx-autostart
 # ranger 
@@ -312,9 +310,8 @@ exec --no-startup-id fcitx-autostart
 #exec --no-startup-id dropbox start
 #volume controller pavucontrol 
 exec --no-startup-id /usr/bin/mate-volume-control-status-icon
-#bluetooth controller
-#exec --no-startup-id blueman-applet 
-
+exec --no-startup-id blueman-applet 
+exec --no-startup-id nm-applet
 #workspace set app
 assign [class="rambox"] workspace 2
 assign [class="Spotify"] workspace 1
@@ -324,9 +321,9 @@ assign [class="org.remmina.Remmina"] workspace 5
 
 
 # application setting(float)
-for_window [class="Spotify"]  floating enable, resize set 800 840, move absolute position 1030 px 87 px
+for_window [class="Spotify"] floating enable, resize set 800 930, move absolute position 1025 px 92 px
 for_window [class="URxvt"]  floating enable, resize set 900 420, move absolute position 80 px 90 px
-for_window [class="kitty"]  floating enable, resize set 900 380, move absolute position 80 px 550 px
+for_window [class="kitty"]  floating enable, resize set 900 470, move absolute position 80 px 550 px
 for_window [class="Arandr"] floating enable, resize set 600 400, move absolute position 100 px 100 px
 for_window [class="Lxappearance"] floating enable, resize set 600 400, move absolute position 100 px 100 px
 for_window [class="Pavucontrol"] floating enable, resize set 1200 900, move absolute position 100 px 100 px
@@ -343,7 +340,8 @@ exec --no-startup-id "xset r rate 200 30"
 # Wallpaper
 #exec --no-startup-id feh --bg-scale '/home/kd/Pictures/kd001.jpg'
 #exec --no-startup-id feh --bg-scale '/home/kd/Dropbox/darkblue.png
-exec --no-startup-id feh --bg-scale '/home/kd/Pictures/archin.jpeg'
+#exec --no-startup-id feh --bg-scale '/home/kd/Pictures/archin.jpeg'
+exec --no-startup-id feh --bg-scale '/home/kd/Pictures/arch.jpg'
 exec --no-startup-id ~/.config/i3/shell/neo.sh 
 #exec --no-startup-id urxvt -e neofetch 
 #exec --no-startup-id rambox 
@@ -352,7 +350,9 @@ exec --no-startup-id spotify
 #exec --no-startup-id firefox workspace 2
 
 #Shutdown
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id \
+        "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Shutdown' 'systemctl poweroff' -b 'Reboot' 'systemctl reboot' -b 'Logout' 'i3-msg exit'"
 #bindsym $mod+Shift+e mode "SHUTDOWN SEQUENCE"
 #mode "SHUTDOWN SEQUENCE"{
 #    bindsym p exec "systemctl poweroff"
