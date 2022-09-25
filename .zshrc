@@ -181,6 +181,22 @@ pfetch|lolcat
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH=$PATH:/home/kd/.spicetify
 export NOW=`date "+%Y%m%d"`
+export NOWDIR=~/work_now/${NOW}
+
+if [ -e $NOWDIR ]
+  then
+    echo "😋😋😋 DonwloadDir is $NOWDIR" | lolcat
+else
+    mkdir $NOWDIR
+    rm -rf ~/Downloads
+    ln -s $NOWDIR ~/Downloads
+fi
+
+if [ ! -e ~/Downloads ]
+  then
+    ln -s $NOWDIR ~/Downloads
+fi
+
 /home/kd/dots/.config/img/rotation.sh 1>/dev/null
 xmodmap ~/.Xmodmap 2>/dev/null
 
