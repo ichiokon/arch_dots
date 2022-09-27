@@ -14,6 +14,7 @@ alias lgit='lazygit'
 alias trj='trans {ja=en}'
 alias tre='trans {en=ja}'
 alias pwgen_all='pwgen -ncy 15 1'
+alias cdm='cd $NOWDIR'
 # /////////////////////
 
 # ///// Histroy //////
